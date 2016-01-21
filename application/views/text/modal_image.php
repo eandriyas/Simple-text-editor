@@ -2,7 +2,7 @@
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
 </div>
-<div class="modal-body" style="overflow-x:scroll;">
+<div class="modal-body" style="">
     <div class="row">
 
         <div class="col-md-8">
@@ -62,7 +62,7 @@
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    <button id="insertPost" type="button" class="btn btn-primary">Insert to post</button>
+    <button id="insertPost" type="button" class="btn btn-primary" data-dismiss="modal">Insert to post</button>
 </div>
 
 <script>
@@ -75,7 +75,6 @@
           cache: false,
           dataType: 'json',
           success: function(data){
-            console.log(data);
 
             var image = data;
             for(var i =0; i<image.length; i++){
@@ -170,7 +169,6 @@ $('[data-toggle="tabajax"]').on('click', function(){
             dataType: 'json',
             cache: false,
             success: function(json){
-                console.log(json);
                 $('#urlImage').val(json.url);
                 $('#titleImage').val(json.title);
             }

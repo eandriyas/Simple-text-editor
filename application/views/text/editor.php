@@ -13,7 +13,7 @@
     <script src="<?php echo base_url('assets/'); ?>/jQuery.MultiFile.min.js"></script>
     <script>tinymce.init({
       selector: 'textarea',
-      height: 500,
+      height: 300,
       theme: 'modern',
       plugins: [
       'advlist autolink lists link charmap print preview hr anchor pagebreak',
@@ -40,9 +40,9 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>/style.css">
 </head>
 <body>
-    <div style="margin-top:100px;" class="container-fluid">
+    <div style="margin-top:100px;" class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <a href="<?php echo base_url('text/modal'); ?>" id="addImage" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#uploadImageModal">
                   Add image
               </a>
@@ -59,8 +59,7 @@
                   </div>
               </form>
           </div>
-          <!-- Button trigger modal -->
-
+         
 
           <!-- Modal -->
           <div class="modal fade" id="uploadImageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -74,21 +73,5 @@
     </div>
 </div>
 </div>
-
-<script>
-    $(document).ready(function(){
-
-
-        $('#addImage').on('click', function(){
-            jQuery('#uploadImage').reset();
-            $('#uploadImage').show();
-
-
-        });
-        
-    });
-
-
-</script>
 </body>
 </html>
